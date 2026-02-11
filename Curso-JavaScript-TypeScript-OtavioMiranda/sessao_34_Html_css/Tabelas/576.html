@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+       
+        table td, table th{
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+       
+        table caption{
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            font-size: 12px;
+            margin-top: 5px 0;
+        }
+
+        tfoot td, table th{
+            background-color: #ddd;
+        }
+       tfoot{
+        font-style: italic ;
+       }
+
+       .responsive-tb{
+            max-width: 100%;
+            overflow-x: auto;
+       }
+
+    </style>
+</head>
+<body>
+    <p>Hoje o dia foi muito legal</p>
+    <div class="responsive-tb">
+    <table>
+        <caption>Uma descriçao para tabela</caption>
+        <thead>
+            <tr>
+                <th>Titulo 1</th>
+                <th>Titulo 2</th>
+                <th>Titulo 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">AQUI</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2" rowspan="2"></td>
+                <td>TOTAL:</td>
+            </tr>
+            <tr>
+                <td>$555</td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+</body>
+</html>

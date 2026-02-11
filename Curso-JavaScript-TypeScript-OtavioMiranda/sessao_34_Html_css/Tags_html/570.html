@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            background-color: blue;
+        }
+        .img-in-text{
+            align-items: start;
+            border-radius: 50px;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="background-color: red;">cabeçalho</h1>
+    <h1>cabeçalho</h1>
+    <p><b>Lorem</b> <strong>ipsum</strong> <i>dolor</i>, <em>amoooooooooo</em> 
+        
+        
+    <a href="https://developer.mozilla.org/pt-BR/docs/web/HTML/Element/strong" 
+    target="_blank">amet    
+        
+    <img class="img-in-text" src="https://cienciahoje.org.br/wp-content/uploads/2018/11/legiao_vpZw6kWY8GuK9cqCh5DJEFafL437IyAz02smlNgRoO.png.jpeg" 
+    alt="Homem aranha dos quadrinhos" width="190" height="190"></a> 
+    
+        <del>azul</del> <ins>vermelho</ins> consectetur <s>adipisicing</s> elit. 
+        Hic, <small>maiores</small> repellat. Ratione 2<sup>2</sup> facilis deserunt
+        consectetur H<sub>2</sub>O
+        libero nostrum modi repudiandae unde fugit error, 
+        amet ex! Velit suscipit at similique quidem. Explicabo.
+    </p>
+    <hr>
+    <p>Lorem ipsum dolor, <q> sit amet consectetur</q> adipisicing elit. 
+        Hic, maiores repellat. <br>Ratione facilis deserunt consectetur 
+        libero nostrum modi repudiandae unde fugit error, <code>console.log</code>
+        amet ex!<br> Velit suscipit at similique quidem. Explicabo.
+    </p>
+    <hr>
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/web/HTML/Element/strong">
+    <p>Aqui estou fazendo um paragrafo/bloco de citaçao</p>    
+    </blockquote>
+    
+    <pre>
+        <code>
+        function gerarNumeroAleatorioJavaScript(minimo, maximo) {
+  /**
+   * Gera um número inteiro aleatório entre minimo (inclusive) e maximo (inclusive).
+   */
+  // Math.random() gera um número entre 0 e 1.
+  // Multiplicamos pelo intervalo e somamos o mínimo para ajustar a faixa.
+  // Usamos Math.floor() para arredondar para baixo e garantir um inteiro.
+  return Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+}
+
+// Exemplo de uso:
+const numeroSorteado = gerarNumeroAleatorioJavaScript(1, 100);
+console.log(`O número aleatório entre 1 e 100 é: ${numeroSorteado}`);
+        </code>
+    </pre>
+
+    <hr>
+
+    <p><span class="vermelho"> Lorem </span>ipsum dolor sit, amet consectetur 
+        adipisicing elit. 
+        Consequuntur voluptatem molestias officiis debitis sed nihil ex! 
+        Quo dolores placeat blanditiis unde, mollitia id veniam earum soluta quidem,
+         maiores rem vel?</p>
+
+         <div class="vermelho">eu sou um bloco</div>
+</body>
+</html>
