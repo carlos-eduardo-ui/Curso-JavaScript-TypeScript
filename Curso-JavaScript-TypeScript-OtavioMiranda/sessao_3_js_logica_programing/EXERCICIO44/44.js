@@ -1,5 +1,6 @@
 
-const form = document.querySelector('#formulario'); // Capturar evento do formulário
+// Capturar evento submit do  formulário
+const form = document.querySelector('#formulario'); 
 
 form.addEventListener('submit', function (e) { //funçao pra capturar um evento
   e.preventDefault(); 
@@ -12,21 +13,16 @@ form.addEventListener('submit', function (e) { //funçao pra capturar um evento
   console.log(peso, altura)
 
   //if para caso os valores dos inputs sejam NaN
-  if (isNaN(peso) && isNaN(altura)) {
+  if (!peso) {
     setResultado('peso e altura invalida', false)
-    return; //evita codigo dar erro ou sobrescrever pra true
+    return; // return evita codigo dar erro ou sobrescrever pra true
   }
-
-  if (peso && altura) {
-    setResultado('peso invalido', false);
-    return; //evita codigo dar erro ou sobrescrever pra true
-  }
-
-  if (altura && peso) {
+  
+  if (!altura) {
     setResultado('altura invalida', false)
-    return; //evita codigo dar erro ou sobrescrever pra true
+    return; //return evita codigo dar erro ou sobrescrever pra true
   }
-
+  
 
   const imc = getIMC(peso, altura); //pega o valor da funcao getIMC onde ja houve
   //o calculo do IMC
@@ -59,12 +55,12 @@ function getIMC(peso, altura) {
 }
 
 //cria um paragrafo
-function criaP(className) {
+function criaP () {
   const p = document.createElement('p'); //cria um elemento <p>
   return p;
 }
 
-//recebe um resultado e confere se é true
+//recebe o resultado do form e confere se é true
 function setResultado(msg, isValid) {
   const resultado = document.querySelector('#resultado')
   resultado.innerHTML = ''; //zera o resultado
@@ -72,9 +68,9 @@ function setResultado(msg, isValid) {
   const p = criaP(); //cria um <p>
   
   if (isValid) { 
-    p.classList.add('paragrafo-resultado');
+    p.classList.add('paragrafo-resultado'); //vai atribuir uma classe ao elemento <p> backgroud green
   } else {
-    p.classList.add('bad')
+    p.classList.add('bad') //vai atribuir uma classe ao elemento <p> backgorund red
   }
 
   
