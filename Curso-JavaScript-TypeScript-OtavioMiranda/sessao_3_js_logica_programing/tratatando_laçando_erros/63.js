@@ -1,0 +1,19 @@
+
+function soma(x, y){
+    if (typeof x !== 'number' || typeof y !== 'number'){   
+    {
+        throw new Error("X e Y precisam ser númeors");
+    }
+    }
+return x +y;
+}
+
+
+//capturamento do erro
+try {
+    console.log(soma(1,2));
+    console.log(soma(1,'2'));
+} catch( error) {
+    console.log(error);
+    console.log("alguma coisa mais amigavel")
+}
